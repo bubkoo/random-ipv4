@@ -1,6 +1,6 @@
 {
   "name": "random-ipv4",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generate a random ipv4 address.",
   "main": "index.js",
   "scripts": {
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bubkoo/random-ipv4.git"
+    "url": "git+https://github.com/mock-end/random-ipv4.git"
   },
   "bugs": {
-    "url": "https://github.com/bubkoo/random-ipv4/issues"
+    "url": "https://github.com/mock-end/random-ipv4/issues"
   },
-  "homepage": "https://github.com/bubkoo/random-ipv4#readme",
+  "homepage": "https://github.com/mock-end/random-ipv4#readme",
   "devDependencies": {
     "jshint": "^2.9.1",
     "chai": "^3.5.0",
@@ -45,6 +45,6 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "random-natural": "file:///Users/Johnny/Documents/github.bubkoo/random-natural"
+    "random-natural": "^1.0.0"
   }
 }
