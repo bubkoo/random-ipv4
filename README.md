@@ -58,7 +58,6 @@ randomIpv4('{token1}.{token2}.{token3}.{token4}', {
 - `schema` - the ipv4 schema, default `'{token1}.{token2}.{token3}.{token4}'`.
 - `options` - options for every **token**, each token has `min` and `max` option, which both are from `0` to `255`.
 
-
 ## Related
 
 - [random-ipv6](https://github.com/mock-end/random-ipv6) - Return a random ipv6 address.
