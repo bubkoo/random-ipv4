@@ -2,7 +2,6 @@
 
 > Return a random ipv4 address.
 
-
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-ipv4/blob/master/LICENSE)
 
 [![build:?](https://img.shields.io/travis/mock-end/random-ipv4/master.svg?style=flat-square)](https://travis-ci.org/mock-end/random-ipv4)
@@ -19,19 +18,16 @@ $ npm install --save random-ipv4
 
 > For more use-cases see the [tests](https://github.com/mock-end/random-ipv4/blob/master/test/spec/index.js)
 
-
 ```js
 var randomIpv4 = require('random-ipv4');
 
 // API
-// - randomIpv4();
-// - randomIpv4(schema);
-// - randomIpv4(schema, options);
+// - randomIpv4(schema[, options]);
 
 randomIpv4();
 // => 193.31.235.41
 
-randomIpv4('127.0.{ token }.1', {
+randomIpv4('127.0.{token}.1', {
     token: {
         min: 127,
         max: 255
@@ -39,7 +35,7 @@ randomIpv4('127.0.{ token }.1', {
 });
 // => 127.0.216.1
 
-randomIpv4('{ token1 }.{ token2 }.{ token3 }.{ token4 }', {
+randomIpv4('{token1}.{token2}.{token3}.{token4}', {
     token1:{
         min: 127,
         max: 127
@@ -59,7 +55,7 @@ randomIpv4('{ token1 }.{ token2 }.{ token3 }.{ token4 }', {
 
 **Note**:
 
-- `schema` - the ipv4 schema, default `'{ token1 }.{ token2 }.{ token3 }.{ token4 }'`.
+- `schema` - the ipv4 schema, default `'{token1}.{token2}.{token3}.{token4}'`.
 - `options` - options for every **token**, each token has `min` and `max` option, which both are from `0` to `255`.
 
 

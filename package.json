@@ -1,6 +1,6 @@
 {
   "name": "random-ipv4",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Return a random ipv4 address.",
   "main": "index.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "random-natural": "^1.0.2"
+    "clamp": "^1.0.1",
+    "random-natural": "^1.0.3"
   }
 }

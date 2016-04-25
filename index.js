@@ -1,8 +1,9 @@
 'use strict';
 
+var clamp        = require('clamp');
 var randomNatual = require('random-natural');
 
-var SCHEMA = '{ token1 }.{ token2 }.{ token3 }.{ token4 }';
+var SCHEMA = '{token1}.{token2}.{token3}.{token4}';
 var MAX    = 255;
 
 function genPart(options) {
@@ -12,17 +13,16 @@ function genPart(options) {
 
   if (isNaN(min) || !isFinite(min)) {
     min = 0;
-  } else {
-    min = Math.min(Math.max(min || 0, 0), MAX);
   }
 
   if (isNaN(max) || !isFinite(max)) {
     max = MAX;
-  } else {
-    max = Math.min(Math.max(max < 0 ? 0 : max, min), MAX);
   }
 
-  return randomNatual(min, max);
+  min = clamp(min, 0, MAX);
+  max = clamp(max, 0, MAX);
+
+  return randomNatual({ min: min, max: max, inspected: true });
 }
 
 function checkPart(part) {
